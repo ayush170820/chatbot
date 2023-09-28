@@ -1,0 +1,26 @@
+# Define the chatbot function
+def simple_chatbot(question):
+    # Convert the question to lowercase for case-insensitive matching
+    question = question.lower()
+
+    # Define predefined questions and their corresponding answers
+    predefined_questions = {
+        "what is your name?": "My name is ChatBot.",
+        "how are you?": "I'm just a computer program, so I don't have feelings, but I'm here to help you!",
+        "what is the weather today?": "I'm sorry, I don't have access to real-time data. You can check a weather website or app for that information.",
+        "bye": "Goodbye! If you have more questions in the future, feel free to ask."
+    }
+
+    # Check if the question is in the predefined questions
+    if question in predefined_questions:
+        return predefined_questions[question]
+    else:
+        return "I'm sorry, I don't understand that question."
+
+# Main loop for the chatbot
+while True:
+    user_input = input("You: ")
+    if user_input.lower() == "exit":
+        break  # Exit the chatbot if the user types "exit"
+    response = simple_chatbot(user_input)
+    print("ChatBot:", response)
