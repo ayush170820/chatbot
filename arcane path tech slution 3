@@ -1,0 +1,21 @@
+# Create an empty to-do list
+to_do_list = []
+
+# Add tasks to the list
+to_do_list.append("Buy groceries")
+to_do_list.append("Finish homework")
+to_do_list.append("Go to the gym")
+
+# Print the to-do list
+print("To-Do List:")
+for index, task in enumerate(to_do_list, start=1):
+    print(f"{index}. {task}")
+
+# Remove a task when it's completed
+completed_task = to_do_list.pop(1)
+print(f"Completed task: {completed_task}")
+
+# Updated to-do list
+print("\nUpdated To-Do List:")
+for index, task in enumerate(to_do_list, start=1):
+    print(f"{index}. {task}")
